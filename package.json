@@ -1,0 +1,30 @@
+{
+  "name": "bpmn-js-nyan",
+  "version": "1.0.0",
+  "description": "Lets processes fly!",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start test/config/karma.unit.js",
+    "test:watch": "karma start test/config/karma.unit.js --auto-watch --no-single-run"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "brfs": "^1.4.1",
+    "browserify": "^10.2.6",
+    "chai": "^3.2.0",
+    "karma": "^0.13.9",
+    "karma-browserify": "^4.3.0",
+    "karma-chai": "^0.1.0",
+    "karma-cli": "^0.1.0",
+    "karma-mocha": "^0.2.0",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "mocha": "^2.3.2",
+    "phantomjs": "^1.9.18"
+  },
+  "dependencies": {
+    "bpmn-js": "^0.11.0",
+    "diagram-js": "^0.11.0",
+    "inherits": "^2.0.1"
+  }
+}
