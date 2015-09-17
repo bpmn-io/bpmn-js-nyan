@@ -3,6 +3,8 @@ var Helper = require('../Helper');
 
 Helper.addStyle('html, body { height: 100%; padding: 0; margin: 0; }');
 
+Helper.addStyle('.icon-red { background: red !important; }');
+
 var fs = require('fs');
 
 
@@ -33,9 +35,24 @@ describe('modeler / nyan version', function() {
     };
   }
 
-  describe('custom rules', function() {
 
-    var customRulesModule = require('../../lib/rules');
+  describe('just modeler', function() {
+
+    function inject(fn) {
+      return withModeler({}, fn);
+    }
+
+
+    it('should allow me to render a process', inject(function() {
+
+    }));
+
+  });
+
+
+  describe('custom rules (resize all)', function() {
+
+    var customRulesModule = require('../../lib/resize-all-rules');
 
     function inject(fn) {
 
@@ -47,7 +64,28 @@ describe('modeler / nyan version', function() {
     }
 
 
-    it('should extend with custom rules', inject(function() {
+    it('should allow to resize all elements', inject(function() {
+
+    }));
+
+  });
+
+
+  describe('custom colors', function() {
+
+    var colorPickerModule = require('../../lib/color-picker');
+
+    function inject(fn) {
+
+      var config = {
+        additionalModules: [ colorPickerModule ]
+      };
+
+      return withModeler(config, fn);
+    }
+
+
+    it('should allow to resize all elements', inject(function() {
 
     }));
 
@@ -56,12 +94,12 @@ describe('modeler / nyan version', function() {
 
   describe('draw', function() {
 
-    var drawModule = require('../../lib/draw');
+    var nyanDrawModule = require('../../lib/nyan/draw');
 
     function inject(fn) {
 
       var config = {
-        additionalModules: [ drawModule ]
+        additionalModules: [ nyanDrawModule ]
       };
 
       return withModeler(config, fn);
@@ -77,12 +115,12 @@ describe('modeler / nyan version', function() {
 
   describe('palette', function() {
 
-    var paletteModule = require('../../lib/palette');
+    var nyanPaletteModule = require('../../lib/nyan/palette');
 
     function inject(fn) {
 
       var config = {
-        additionalModules: [ paletteModule ]
+        additionalModules: [ nyanPaletteModule ]
       };
 
       return withModeler(config, fn);
@@ -98,13 +136,20 @@ describe('modeler / nyan version', function() {
 
   describe.only('combined', function() {
 
-    var paletteModule = require('../../lib/palette');
-    var drawModule = require('../../lib/draw');
+    var nyanPaletteModule = require('../../lib/nyan/palette');
+    var nyanDrawModule = require('../../lib/nyan/draw');
+    var colorPickerModule = require('../../lib/color-picker');
+    var resizeAllModule = require('../../lib/resize-all-rules');
 
     function inject(fn) {
 
       var config = {
-        additionalModules: [ paletteModule, drawModule ]
+        additionalModules: [
+          nyanPaletteModule,
+          nyanDrawModule,
+          colorPickerModule,
+          resizeAllModule
+        ]
       };
 
       return withModeler(config, fn);
