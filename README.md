@@ -10,6 +10,13 @@ This projects bundles lovely nyan cats into a custom BPMN 2.0 modeler.
 !["nyan cat in bpmn-js"](https://raw.githubusercontent.com/nikku/bpmn-js-nyan/master/docs/screencast.gif)
 
 
+## Great things not in bpmn-js
+
+* [Resize all elements](https://github.com/nikku/bpmn-js-nyan/tree/master/lib/resize-all-rules)
+* [Nyan Cats](https://github.com/nikku/bpmn-js-nyan/tree/master/lib/nyan)
+* [Custom Colors](https://github.com/nikku/bpmn-js-nyan/tree/master/lib/color-picker)
+
+
 ## Building
 
 ```
