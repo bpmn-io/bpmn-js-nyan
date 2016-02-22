@@ -11,10 +11,10 @@
   "license": "MIT",
   "devDependencies": {
     "brfs": "^1.4.1",
-    "browserify": "^10.2.6",
+    "browserify": "^13.0.0",
     "chai": "^3.2.0",
     "karma": "^0.13.9",
-    "karma-browserify": "^4.3.0",
+    "karma-browserify": "^5.0.0",
     "karma-chai": "^0.1.0",
     "karma-cli": "^0.1.0",
     "karma-mocha": "^0.2.0",
@@ -23,8 +23,8 @@
     "phantomjs": "^1.9.18"
   },
   "dependencies": {
-    "bpmn-js": "^0.11.0",
-    "diagram-js": "^0.11.0",
+    "bpmn-js": "^0.13.0",
+    "diagram-js": "^0.13.0",
     "inherits": "^2.0.1"
   }
 }
