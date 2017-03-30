@@ -1,4 +1,3 @@
-
 var Helper = require('../Helper');
 
 Helper.addStyle('html, body { height: 100%; padding: 0; margin: 0; }');
@@ -21,6 +20,8 @@ describe('modeler / nyan version', function() {
     return function(done) {
 
       var modeler = new Modeler(config);
+
+      modeler.attachTo('body');
 
       modeler.importXML(diagram, function(err) {
         if (err) {
