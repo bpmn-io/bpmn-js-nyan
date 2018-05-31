@@ -23,9 +23,6 @@ addStyle(`
 
   .bjs-container {
     border: solid 2px #CCC;
-  }
-
-  .bjs-container:not(:last-child) {
     margin-bottom: 10px;
   }
 `);
@@ -169,7 +166,10 @@ describe('modeler / nyan version', function() {
           nyanDrawModule,
           colorPickerModule,
           resizeAllModule
-        ]
+        ],
+        keyboard: {
+          bindTo: document.body
+        }
       };
 
       return withModeler(config, fn);
