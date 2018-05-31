@@ -1,27 +1,35 @@
 # bpmn-js-nyan
 
-[bpmn-js](https://github.com/bpmn-io/bpmn-js) + !["nyan cat in the wild"](https://raw.githubusercontent.com/nikku/bpmn-js-nyan/master/docs/cat.gif) = auto-win.
+[bpmn-js](https://github.com/bpmn-io/bpmn-js) + !["nyan cat in the wild"](./docs/cat.gif) = auto-win.
 
 This projects bundles lovely nyan cats into a custom BPMN 2.0 modeler.
 
 
 ## Nyan cat in your next BPMN modeler
 
-!["nyan cat in bpmn-js"](https://raw.githubusercontent.com/nikku/bpmn-js-nyan/master/docs/screencast.gif)
+!["nyan cat in bpmn-js"](./docs/screencast.gif)
 
 
 ## Great things not in bpmn-js
 
-* [Resize all elements](https://github.com/nikku/bpmn-js-nyan/tree/master/lib/resize-all-rules)
-* [Nyan Cats](https://github.com/nikku/bpmn-js-nyan/tree/master/lib/nyan)
-* [Custom Colors](https://github.com/nikku/bpmn-js-nyan/tree/master/lib/color-picker)
+* [Resize all elements](./lib/resize-all-rules)
+* [Nyan Cats](./lib/nyan)
+* [Custom Colors](./lib/color-picker)
 
 
 ## Building
 
+To build, lint and test the project run
+
 ```
 npm install
-npm run test:watch
+npm run all
+```
+
+To spin up the test interactively in the browser, execute
+
+```
+npm run dev
 ```
 
 Visit [localhost:9876/debug.html](http://localhost:9876/debug.html) in your browser.

@@ -1,18 +1,50 @@
-var Helper = require('../Helper');
+import {
+  addStyle
+} from '../Helper';
 
-Helper.addStyle('html, body { height: 100%; padding: 0; margin: 0; }');
+addStyle(`
+  * {
+    box-sizing: border-box;
+  }
 
-Helper.addStyle('.icon-red { background: red !important; }');
+  html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
 
-var fs = require('fs');
+  body {
+    padding: 10px;
+  }
 
+  .icon-red {
+    background: red !important;
+  }
 
-var Modeler = require('bpmn-js/lib/Modeler');
+  .bjs-container {
+    border: solid 2px #CCC;
+  }
+
+  .bjs-container:not(:last-child) {
+    margin-bottom: 10px;
+  }
+`);
+
+import Modeler from 'bpmn-js/lib/Modeler';
+
+import customRulesModule from '../../lib/resize-all-rules';
+
+import colorPickerModule from '../../lib/color-picker';
+
+import nyanDrawModule from '../../lib/nyan/draw';
+import nyanPaletteModule from '../../lib/nyan/palette';
+
+import resizeAllModule from '../../lib/resize-all-rules';
 
 
 describe('modeler / nyan version', function() {
 
-  var diagram = fs.readFileSync(__dirname + '/diagram.bpmn', 'utf-8');
+  var diagram = require('./diagram.bpmn');
 
 
   function withModeler(config, fn) {
@@ -53,8 +85,6 @@ describe('modeler / nyan version', function() {
 
   describe('custom rules (resize all)', function() {
 
-    var customRulesModule = require('../../lib/resize-all-rules');
-
     function inject(fn) {
 
       var config = {
@@ -73,8 +103,6 @@ describe('modeler / nyan version', function() {
 
 
   describe('custom colors', function() {
-
-    var colorPickerModule = require('../../lib/color-picker');
 
     function inject(fn) {
 
@@ -95,8 +123,6 @@ describe('modeler / nyan version', function() {
 
   describe('draw', function() {
 
-    var nyanDrawModule = require('../../lib/nyan/draw');
-
     function inject(fn) {
 
       var config = {
@@ -116,8 +142,6 @@ describe('modeler / nyan version', function() {
 
   describe('palette', function() {
 
-    var nyanPaletteModule = require('../../lib/nyan/palette');
-
     function inject(fn) {
 
       var config = {
@@ -135,12 +159,7 @@ describe('modeler / nyan version', function() {
   });
 
 
-  describe.only('combined', function() {
-
-    var nyanPaletteModule = require('../../lib/nyan/palette');
-    var nyanDrawModule = require('../../lib/nyan/draw');
-    var colorPickerModule = require('../../lib/color-picker');
-    var resizeAllModule = require('../../lib/resize-all-rules');
+  describe('combined', function() {
 
     function inject(fn) {
 

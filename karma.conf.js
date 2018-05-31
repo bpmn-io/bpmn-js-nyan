@@ -3,9 +3,11 @@
 module.exports = function(karma) {
   karma.set({
 
-    basePath: '../../',
-
-    frameworks: [ 'browserify', 'mocha', 'chai' ],
+    frameworks: [
+      'browserify',
+      'mocha',
+      'sinon-chai'
+    ],
 
     files: [
       'test/spec/**/*Spec.js',
@@ -27,7 +29,20 @@ module.exports = function(karma) {
     // browserify configuration
     browserify: {
       debug: true,
-      transform: [ [ 'brfs', { global: true } ] ]
+      transform: [
+        [ 'babelify', {
+          global: true,
+          babelrc: false,
+          presets: [ 'env' ]
+        } ],
+        [ 'stringify', {
+          global: true,
+          extensions: [
+            '.bpmn',
+            '.css'
+          ]
+        } ]
+      ]
     }
   });
 };
