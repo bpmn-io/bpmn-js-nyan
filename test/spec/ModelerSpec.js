@@ -29,14 +29,12 @@ addStyle(`
 
 import Modeler from 'bpmn-js/lib/Modeler';
 
-import customRulesModule from '../../lib/resize-all-rules';
+import resizeAllModule from '../../lib/resize-all-rules';
 
 import colorPickerModule from '../../lib/color-picker';
 
 import nyanDrawModule from '../../lib/nyan/draw';
 import nyanPaletteModule from '../../lib/nyan/palette';
-
-import resizeAllModule from '../../lib/resize-all-rules';
 
 
 describe('modeler / nyan version', function() {
@@ -85,7 +83,7 @@ describe('modeler / nyan version', function() {
     function inject(fn) {
 
       var config = {
-        additionalModules: [ customRulesModule ]
+        additionalModules: [ resizeAllModule ]
       };
 
       return withModeler(config, fn);
