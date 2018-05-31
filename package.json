@@ -12,6 +12,10 @@
   },
   "author": "Nico Rehwaldt <https://github.com/nikku>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bpmn-io/bpmn-js-nyan"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
