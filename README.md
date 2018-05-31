@@ -7,16 +7,40 @@
 This projects bundles lovely nyan cats into a custom BPMN 2.0 modeler.
 
 
-## Nyan cat in your next BPMN modeler
+## About
+
+Stand out and integrate nyan cats into your next BPMN Modeler!
 
 !["nyan cat in bpmn-js"](./docs/screencast.gif)
 
 
-## Great things not in bpmn-js
+## Great Features
 
-* [Resize all elements](./lib/resize-all-rules)
-* [Nyan Cats](./lib/nyan)
 * [Custom Colors](./lib/color-picker)
+* [Nyan Cats](./lib/nyan)
+* [Resize all elements](./lib/resize-all-rules)
+
+
+## Usage
+
+```javascript
+import BpmnModeler from 'bpmn-js/lib/modeler';
+
+import resizeAllModule from 'bpmn-js-nyan/lib/resize-all-rules';
+import colorPickerModule from 'bpmn-js-nyan/lib/color-picker';
+import nyanDrawModule from 'bpmn-js-nyan/lib/nyan/draw';
+import nyanPaletteModule from 'bpmn-js-nyan/lib/nyan/palette';
+
+
+var bpmnJS = new BpmnModeler({
+  additionalModules: [
+    resizeAllModule,
+    colorPickerModule,
+    nyanDrawModule,
+    nyanPaletteModule
+  ]
+});
+```
 
 
 ## Building
@@ -35,6 +59,16 @@ npm run dev
 ```
 
 Visit [localhost:9876/debug.html](http://localhost:9876/debug.html) in your browser.
+
+
+## Related
+
+If you enjoy nyan cats you might be interested in these related examples, too:
+
+* [Colors](https://github.com/bpmn-io/bpmn-js-examples/tree/master/colors)
+* [Custom Elements](https://github.com/bpmn-io/bpmn-js-examples/tree/master/custom-elements)
+* [Custom Modeling Rules](https://github.com/bpmn-io/bpmn-js-examples/tree/master/custom-modeling-rules)
+* [Theming](https://github.com/bpmn-io/bpmn-js-examples/tree/master/theming)
 
 
 ## License
