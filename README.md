@@ -24,7 +24,7 @@ Stand out and integrate nyan cats into your next BPMN Modeler!
 ## Usage
 
 ```javascript
-import BpmnModeler from 'bpmn-js/lib/modeler';
+import BpmnModeler from 'bpmn-js/lib/Modeler';
 
 import resizeAllModule from 'bpmn-js-nyan/lib/resize-all-rules';
 import colorPickerModule from 'bpmn-js-nyan/lib/color-picker';
