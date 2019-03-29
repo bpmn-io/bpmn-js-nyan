@@ -6,6 +6,8 @@
 
 This projects bundles lovely nyan cats into a custom BPMN 2.0 modeler.
 
+:notebook: If you're interested in custom elements head over to [custom-elements](https://github.com/bpmn-io/bpmn-js-examples/tree/master/custom-elements) to get an overview first.
+
 
 ## About
 
