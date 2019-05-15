@@ -1,4 +1,4 @@
-> :notebook: If you're interested in custom elements head over to [custom-elements](https://github.com/bpmn-io/bpmn-js-examples/tree/master/custom-elements) to get an overview first.
+> If you're interested in custom elements in general, head over to our [:notebook: custom-elements guide](https://github.com/bpmn-io/bpmn-js-examples/tree/master/custom-elements) to get an overview first.
 
 
 # bpmn-js-nyan
