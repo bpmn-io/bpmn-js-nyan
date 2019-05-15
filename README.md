@@ -1,3 +1,6 @@
+> :notebook: If you're interested in custom elements head over to [custom-elements](https://github.com/bpmn-io/bpmn-js-examples/tree/master/custom-elements) to get an overview first.
+
+
 # bpmn-js-nyan
 
 [![Build Status](https://travis-ci.org/bpmn-io/bpmn-js-nyan.svg?branch=master)](https://travis-ci.org/bpmn-io/bpmn-js-nyan)
@@ -5,8 +8,6 @@
 [bpmn-js](https://github.com/bpmn-io/bpmn-js) + !["nyan cat in the wild"](./docs/cat.gif) = auto-win.
 
 This projects bundles lovely nyan cats into a custom BPMN 2.0 modeler.
-
-:notebook: If you're interested in custom elements head over to [custom-elements](https://github.com/bpmn-io/bpmn-js-examples/tree/master/custom-elements) to get an overview first.
 
 
 ## About
