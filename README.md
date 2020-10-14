@@ -3,7 +3,7 @@
 
 # bpmn-js-nyan
 
-[![Build Status](https://travis-ci.org/bpmn-io/bpmn-js-nyan.svg?branch=master)](https://travis-ci.org/bpmn-io/bpmn-js-nyan)
+[![Build Status](https://travis-ci.com/bpmn-io/bpmn-js-nyan.svg?branch=master)](https://travis-ci.com/bpmn-io/bpmn-js-nyan)
 
 [bpmn-js](https://github.com/bpmn-io/bpmn-js) + !["nyan cat in the wild"](./docs/cat.gif) = auto-win.
 
