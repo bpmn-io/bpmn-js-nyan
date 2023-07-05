@@ -45,5 +45,8 @@
   "peerDependencies": {
     "bpmn-js": "^2.1.0",
     "diagram-js": "^2.2.0"
-  }
+  },
+  "files": [
+    "lib"
+  ]
 }
