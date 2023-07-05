@@ -1,6 +1,6 @@
 {
   "name": "bpmn-js-nyan",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Lets processes fly!",
   "scripts": {
     "all": "run-s lint test",
