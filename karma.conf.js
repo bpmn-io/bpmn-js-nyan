@@ -1,12 +1,17 @@
 /* eslint-env node */
 
-'use strict';
+// configures browsers to run test against
+// any of [ 'ChromeHeadless', 'Chrome', 'Firefox' ]
+var browsers = (process.env.TEST_BROWSERS || 'ChromeHeadless').split(',');
+
+// use puppeteer provided Chrome for testing
+process.env.CHROME_BIN = require('puppeteer').executablePath();
 
 module.exports = function(karma) {
   karma.set({
 
     frameworks: [
-      'browserify',
+      'webpack',
       'mocha',
       'sinon-chai'
     ],
@@ -18,33 +23,36 @@ module.exports = function(karma) {
     reporters: [ 'dots' ],
 
     preprocessors: {
-      'test/spec/**/*Spec.js': [ 'browserify' ]
+      'test/spec/**/*Spec.js': [ 'webpack' ]
     },
 
-    browsers: [ 'PhantomJS' ],
+    browsers,
 
     browserNoActivityTimeout: 30000,
 
     singleRun: true,
     autoWatch: false,
 
-    // browserify configuration
-    browserify: {
-      debug: true,
-      transform: [
-        [ 'babelify', {
-          global: true,
-          babelrc: false,
-          presets: [ 'env' ]
-        } ],
-        [ 'stringify', {
-          global: true,
-          extensions: [
-            '.bpmn',
-            '.css'
-          ]
-        } ]
-      ]
+    webpack: {
+      mode: 'development',
+      target: 'browserslist:last 2 versions, IE 11',
+      module: {
+        rules: [
+          {
+            test: /TestHelper/,
+            sideEffects: true
+          },
+          {
+            test: /\.(css|bpmn)$/,
+            type: 'asset/source'
+          },
+          {
+            test: /\.png$/,
+            type: 'asset/resource'
+          }
+        ]
+      },
+      devtool: 'eval-source-map'
     }
   });
 };
