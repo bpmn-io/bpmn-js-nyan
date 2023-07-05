@@ -1,5 +1,5 @@
-var diagramCSS = require('diagram-js/assets/diagram-js.css');
-var bpmnFontCSS = require('bpmn-js/dist/assets/bpmn-font/css/bpmn-embedded.css');
+import diagramCSS from 'bpmn-js/dist/assets/diagram-js.css';
+import bpmnFontCSS from 'bpmn-js/dist/assets/bpmn-font/css/bpmn-embedded.css';
 
 
 export function addStyle(styleText) {
@@ -12,8 +12,6 @@ export function addStyle(styleText) {
 
   head.appendChild(styleElement);
 }
-
-module.exports.addStyle = addStyle;
 
 
 // add initial style
