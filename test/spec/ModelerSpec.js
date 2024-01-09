@@ -50,16 +50,9 @@ describe('modeler / nyan version', function() {
 
       modeler.attachTo('body');
 
-      modeler.importXML(diagram, function(err) {
-        if (err) {
-          done(err);
-        }
-
-        modeler.invoke(fn);
-
-        done();
-      });
-
+      modeler.importXML(diagram).then(
+        () => modeler.invoke(fn)
+      ).then(done, done);
     };
   }
 
