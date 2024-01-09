@@ -33,7 +33,7 @@
     "puppeteer": "^21.0.0",
     "sinon": "^17.0.1",
     "sinon-chai": "^3.1.0",
-    "webpack": "^5.88.1"
+    "webpack": "^5.89.0"
   },
   "dependencies": {
     "inherits-browser": "^0.1.0"
