@@ -18,7 +18,7 @@
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "bpmn-js": "^13.2.1",
+    "bpmn-js": "^16.0.0",
     "chai": "^4.4.0",
     "diagram-js": "^13.0.0",
     "eslint": "^8.56.0",
