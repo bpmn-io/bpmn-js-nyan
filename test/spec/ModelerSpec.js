@@ -36,10 +36,10 @@ import colorPickerModule from '../../lib/color-picker';
 import nyanDrawModule from '../../lib/nyan/draw';
 import nyanPaletteModule from '../../lib/nyan/palette';
 
+import diagram from './diagram.bpmn';
+
 
 describe('modeler / nyan version', function() {
-
-  var diagram = require('./diagram.bpmn');
 
 
   function withModeler(config, fn) {
