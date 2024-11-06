@@ -102,7 +102,7 @@ describe('modeler / nyan version', function() {
     }
 
 
-    it('should allow to resize all elements', inject(function() {
+    it('should allow to color modules', inject(function() {
 
     }));
 
