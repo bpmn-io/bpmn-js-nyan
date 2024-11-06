@@ -16,7 +16,7 @@
     "url": "https://github.com/bpmn-io/bpmn-js-nyan"
   },
   "devDependencies": {
-    "bpmn-js": "^17.0.0",
+    "bpmn-js": "^18.0.0",
     "chai": "^4.4.0",
     "diagram-js": "^15.0.0",
     "eslint": "^9.0.0",
