@@ -27,7 +27,6 @@
     "karma-webpack": "^5.0.1",
     "mocha": "^11.0.0",
     "npm-run-all2": "^9.0.0",
-    "puppeteer": "^25.0.0",
     "webpack": "^5.104.1"
   },
   "dependencies": {
